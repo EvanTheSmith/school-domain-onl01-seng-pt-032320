@@ -2,7 +2,6 @@ require 'pry'
 
 class School
   attr_accessor :name, :roster
-  done_sorted = {}
   
   def initialize(name)
     @name = name
@@ -21,6 +20,7 @@ class School
   end
   
   def sort
+    done_sorted = {}
      @roster.each do |grade, name|
       done_sorted[grade] = name.sorted
      end
